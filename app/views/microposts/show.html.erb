@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Content:</b>
+  <b>Post:</b>
   <%= @micropost.content %>
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @micropost.user_id %>
+  <b>Usuário:</b>
+  <%= User.find( @micropost.user_id ).name %>
 </p>
 
 
-<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-<%= link_to 'Back', microposts_path %>
+<%= link_to 'Editar', edit_micropost_path(@micropost) %> |
+<%= link_to 'Voltar', microposts_path %>
